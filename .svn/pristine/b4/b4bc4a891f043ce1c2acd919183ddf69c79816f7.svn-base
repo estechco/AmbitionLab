@@ -1,0 +1,24 @@
+            <div id="outer">
+                <div id="container">
+                    <div id="inner">
+                        <img src="img/logo.png" />
+                        <br />
+                        <br />
+                        <div ng-show='ready'>
+                            <div ng-hide='stagenum <= 1'>
+                                <h4>Thank you for completing both parts of the AmbitionLab survey</h4>
+                            </div>
+                            <div ng-show='stagenum <= 1'>
+                                <button class="btn btn-primary" ng-click="startSurvey()">Start</button>
+                                <br />
+                                <br />
+                                <h4>{{welcomeMsg}}</h4>
+                                <h4>Please complete this <i>{{stage}}</i> seeing the film</h4>
+                            </div>
+                        </div>
+                        <div ng-hide='ready'>
+                            <img src="img/ajax-loader4.gif" />
+                        </div>
+                    </div>
+                </div>
+            </div>

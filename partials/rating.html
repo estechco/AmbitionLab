@@ -1,0 +1,16 @@
+            <div class="panel">
+                <!--
+                <p>{{item}}</p>
+                -->
+                <h4>{{item.title}}</h4>
+                <div ng-controller="RatingCtrl">
+                          <span  ng-init="show = false" ng-mouseenter="show = true" ng-mouseleave="show = false; hoverhint = ''">
+                            <div star-rating rating-value="rating" chance-value="item.chance" hover-hint="hoverhint" max="9" on-rating-selected="saveRatingToServer(rating)"></div>
+                          </span>
+                          <span ng-show="! show"><b>{{current}}</b>&nbsp;</span>
+                          <span ng-show="show"><i>{{hoverhint}}</i>&nbsp;</span>
+                          <br />
+                          <br />
+                          <button class="btn btn-small" ng-click="reset()" ng-disabled="item.result == null">Reset</button>
+                </div>
+            </div>

@@ -1,0 +1,13 @@
+        <div ng-repeat="item in data | startFrom:currentPage*pageSize | limitTo:pageSize">
+            <div class="panel">
+                <!--
+                <p>{{item}}</p>
+                -->
+                <h4>{{item.title}}</h4>
+                <div ng-controller="DropdownCtrl">
+                    <select ng-model="item.result" ng-options="choice.v as choice.t for choice in item.choice">
+                      <option value="v">t</option>
+                    </select>
+                </div>
+            </div>
+        </div>

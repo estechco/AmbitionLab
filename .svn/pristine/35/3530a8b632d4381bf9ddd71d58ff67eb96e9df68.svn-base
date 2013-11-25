@@ -1,0 +1,24 @@
+.rating{
+  color: silver/*#a9a9a9*/;
+  margin: 0;
+  padding: 0;
+}
+
+ul.rating {
+  display: inline-block;
+}
+
+.rating li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 1px;
+  text-align: center;
+  font-weight: bold;
+  /*font-size: 200%;*/
+  cursor: pointer;
+}
+
+.rating .filled {
+  color: red/*#21568b*/;
+}
+

@@ -1,0 +1,104 @@
+[
+    {
+        "id": 1,
+        "title": "The is a dropdown question",
+	   "choice": [{"t": "Choice 1", "v": 11}, {"t": "Choice 2", "v": 22}, {"t": "Choice 3", "v": 33}, {"t": "Choice 4", "v": 44}],
+        "type": 2
+    },
+    {
+        "id": 2,
+        "title": "My image will be one that others find appealing (Importance).",
+        "type": 0
+    },
+    {
+        "id": 3,
+        "title": "My image will be one that others find appealing (Chance).",
+        "type": 0,
+        "chance": true
+    },
+    {
+        "id": 4,
+        "title": "The is a plain text question",
+        "type": 1
+    },
+    {
+        "id": 5,
+        "title": "Question 5",
+        "type": 0
+    },
+    {
+        "id": 6,
+        "title": "Question 6",
+        "type": 1
+    },
+    {
+        "id": 7,
+        "title": "Question 7",
+        "type": 0
+    },
+    {
+        "id": 8,
+        "title": "Question 8",
+        "type": 1
+    },
+    {
+        "id": 9,
+        "title": "Question 9",
+        "type": 0
+    },
+    {
+        "id": 10,
+        "title": "Question 10",
+        "type": 1
+    },
+    {
+        "id": 11,
+        "title": "Question 11",
+        "type": 0
+    },
+    {
+        "id": 12,
+        "title": "Question 12",
+        "type": 1
+    },
+    {
+        "id": 13,
+        "title": "Question 13",
+        "type": 0
+    },
+    {
+        "id": 14,
+        "title": "Question 14",
+        "type": 1
+    },
+    {
+        "id": 15,
+        "title": "Question 15",
+        "type": 0
+    },
+    {
+        "id": 16,
+        "title": "Question 16",
+        "type": 1
+    },
+    {
+        "id": 17,
+        "title": "Question 17",
+        "type": 0
+    },
+    {
+        "id": 18,
+        "title": "Question 18",
+        "type": 1
+    },
+    {
+        "id": 19,
+        "title": "Question 19",
+        "type": 0
+    },
+    {
+        "id": 20,
+        "title": "Question 20",
+        "type": 1
+    }
+]

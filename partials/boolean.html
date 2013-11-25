@@ -1,0 +1,21 @@
+        <div ng-repeat="item in data | startFrom:currentPage*pageSize | limitTo:pageSize">
+            <div class="panel">
+                <!--
+                <p>{{item}}</p>
+                -->
+                <h4>{{item.title}}</h4>
+                <div ng-controller="BooleanCtrl">
+                <!--
+                    <span class="btn boolean" ng-click="item.result=!item.result" ng-model="item.result">
+                        <span class="on btn-success" ng-show="item.result">Yes</span>
+                        <span class="off btn-default" ng-hide="item.result">No</span>  
+                    </span>
+                -->
+                    <buttons-radio class="btn-group" data-toggle="buttons-radio" model='item.result' options='boolOptions'></buttons-radio>
+                    <div ng-show='item.result=="Yes"'>
+                        <h4>If so, what?</h4>
+                        <textarea rows="3" ng-model="item.notes"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>

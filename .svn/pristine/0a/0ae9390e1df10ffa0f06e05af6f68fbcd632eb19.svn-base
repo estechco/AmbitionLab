@@ -1,0 +1,84 @@
+/* > 1200 px screen width */
+
+@media screen and (min-width: 1201px){
+
+#container {
+height:560px;
+} 
+
+.rating li {
+  font-size: 300%;
+}
+
+}
+
+/* 981 - 1200 px screen width */
+
+@media screen and (min-width: 981px) and (max-width: 1200px){
+
+#container {
+height:470px;
+} 
+
+.rating li {
+  font-size: 250%;
+}
+
+}
+
+/* 769 - 980 px screen width */
+
+@media screen and (min-width: 769px) and (max-width: 980px){
+
+#container {
+height:380px;
+} 
+
+.rating li {
+  font-size: 200%;
+}
+
+}
+
+
+/* 480 - 768 px screen width */
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+#container {
+height:270px;
+} 
+
+.container-fluid
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.rating li {
+  font-size: 175%;
+}
+
+}
+
+
+/* <= 480 px screen width */
+
+@media screen and (max-width: 480px){
+
+#container {
+height:230px;
+}
+
+.container-fluid
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.rating li {
+  font-size: 150%;
+}
+
+}
+

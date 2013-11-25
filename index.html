@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <title>AmbitionLab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!--
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="css/checkbox.css" />
+    -->
+    <!-- Can also use "slate", "cerulean", "flatly" below instead of "united" -->
+    <link href="//netdna.bootstrapcdn.com/bootswatch/2.3.2/united/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="css/screen.css" />
+    <link rel="stylesheet" media="screen" href="css/styles.css" />
+    <link rel="stylesheet" media="screen" href="css/boolean.css" />
+    <link rel="stylesheet" media="screen" href="css/directives/rating.css"/>
+<style>
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  [class^=slider] { display: inline-block; margin-bottom: 30px; }
+  .output { color: #888; font-size: 14px; padding-top: 1px; margin-left: 5px; vertical-align: top;}
+  h1 { font-size: 20px; }
+  h2 { clear: both; margin: 0; margin-bottom: 5px; font-size: 16px; }
+  p { font-size: 15px; margin-bottom: 30px; }
+  h2:first-of-type { margin-top: 0; }
+  </style>
+</head>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<body>
+
+        <div ng-app="ambitionLab">
+            <div data-ng-controller="SurveyOuterCtrl">
+                <div data-ng-controller="LandingCtrl" ng-show="welcome && !finished">
+                    <div ng-include="landingurl">
+                    </div>
+                </div>
+
+                <div data-ng-controller="SurveyCtrl" ng-hide="welcome || finished">
+                    <div data-ng-controller="HeaderCtrl">
+                        <div ng-include="headerurl">
+                        </div>
+
+                        <div ng-repeat="item in data | startFrom:currentPage*pageSize | limitTo:pageSize">
+                            <div class="container-fluid" data-ng-controller="MainCtrl">
+                                <div ng-include="template.url">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-ng-controller="FooterCtrl">
+                            <div class="navbar navbar-fixed-bottomX" ng-include="footerurl">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-ng-controller="EndingCtrl" ng-show="finished">
+                    <div ng-include="endingurl">
+                    </div>
+                </div>
+           </div>
+        </div>
+
+
+    <!--
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.8/require.min.js"></script>
+    -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+        <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+        <script src="js/vendor/localStorageModule.js"></script>
+        <script src="js/controllers/ambitionLab.js"></script>
+</body>
+</html>
